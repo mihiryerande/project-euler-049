@@ -15,9 +15,10 @@
 
 from itertools import permutations
 from math import floor, sqrt
+from typing import Set, Tuple
 
 
-def has_same_digits(x, y):
+def has_same_digits(x: int, y: int) -> bool:
     """
     Returns True iff `x` and `y` are permutations of the digits of each other.
 
@@ -36,7 +37,7 @@ def has_same_digits(x, y):
     return sorted(str(x)) == sorted(str(y))
 
 
-def main():
+def main() -> Set[Tuple[int, int, int]]:
     """
     Returns the two arithmetic sequences, each of three 4-digit primes,
       having the following properties:
